@@ -32,6 +32,13 @@ Install-Package Asyntai.Umbraco.Chatbot
 dotnet add package Asyntai.Umbraco.Chatbot
 ```
 
+### Via Asyntai.com
+1. Go to [asyntai.com/dashboard](https://asyntai.com/dashboard)
+2. Create or select your chatbot
+3. Copy the JavaScript snippet
+4. Paste it into your site's layout template (before the closing `</body>` tag)
+
+
 ## Usage
 
 1. Install the package and rebuild your site
@@ -66,3 +73,4 @@ Have any questions? That's a great opportunity to test our AI assistant! Try it 
 ## License
 
 MIT License - see LICENSE file for details.
+
