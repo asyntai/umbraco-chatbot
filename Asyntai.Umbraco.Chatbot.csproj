@@ -1,0 +1,48 @@
+<Project Sdk="Microsoft.NET.Sdk.Razor">
+
+  <PropertyGroup>
+    <TargetFrameworks>net8.0;net9.0;net10.0</TargetFrameworks>
+    <ImplicitUsings>enable</ImplicitUsings>
+    <Nullable>enable</Nullable>
+    <AddRazorSupportForMvc>true</AddRazorSupportForMvc>
+    <StaticWebAssetBasePath>/</StaticWebAssetBasePath>
+
+    <!-- NuGet package metadata -->
+    <PackageId>Asyntai.Umbraco.Chatbot</PackageId>
+    <Version>1.0.0</Version>
+    <Authors>Asyntai</Authors>
+    <Company>Asyntai</Company>
+    <Product>Asyntai - AI Chatbot for Umbraco</Product>
+    <Description>Create and launch AI assistant/chatbot for your Umbraco website in minutes. It talks to your visitors, helps, explains, never misses a chat and can increase conversion rates! All while knowing your website, customized just for you. Your Umbraco website can now talk.</Description>
+    <Copyright>Copyright © 2025 Asyntai</Copyright>
+    <PackageProjectUrl>https://asyntai.com</PackageProjectUrl>
+    <RepositoryUrl>https://github.com/asyntai/umbraco-chatbot</RepositoryUrl>
+    <PackageTags>umbraco-marketplace;umbraco;chatbot;ai;assistant;support;chat;widget</PackageTags>
+    <PackageLicenseExpression>MIT</PackageLicenseExpression>
+    <PackageReadmeFile>README.md</PackageReadmeFile>
+    <PackageIcon>icon.png</PackageIcon>
+  </PropertyGroup>
+
+  <ItemGroup>
+    <FrameworkReference Include="Microsoft.AspNetCore.App" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <PackageReference Include="Umbraco.Cms" Version="[14.0.0,)" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <None Include="README.md" Pack="true" PackagePath="" />
+    <None Include="LICENSE" Pack="true" PackagePath="" />
+    <None Include="icon.png" Pack="true" PackagePath="" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <Content Update="App_Plugins\**\*" CopyToOutputDirectory="PreserveNewest" Pack="true" PackagePath="contentFiles\any\any\App_Plugins\Asyntai" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <None Include="build\**\*" Pack="true" PackagePath="build" />
+  </ItemGroup>
+
+</Project>

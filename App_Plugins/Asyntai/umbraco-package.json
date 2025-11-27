@@ -1,0 +1,25 @@
+{
+  "$schema": "../../umbraco-package-schema.json",
+  "id": "Asyntai.Chatbot",
+  "name": "Asyntai - AI Chatbot",
+  "version": "1.0.0",
+  "extensions": [
+    {
+      "type": "dashboard",
+      "alias": "Asyntai.Dashboard",
+      "name": "Asyntai AI Chatbot",
+      "element": "/App_Plugins/Asyntai/dashboard-element.js",
+      "weight": 10,
+      "meta": {
+        "label": "Asyntai AI Chatbot",
+        "pathname": "asyntai"
+      },
+      "conditions": [
+        {
+          "alias": "Umb.Condition.SectionAlias",
+          "match": "Umb.Section.Settings"
+        }
+      ]
+    }
+  ]
+}

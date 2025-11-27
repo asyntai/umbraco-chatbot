@@ -1,0 +1,9 @@
+@model Asyntai.Umbraco.Chatbot.Models.AsyntaiSettings
+@{
+    var siteId = Model?.SiteId ?? string.Empty;
+    var scriptUrl = Model?.ScriptUrl ?? "https://asyntai.com/static/js/chat-widget.js";
+}
+@if (!string.IsNullOrWhiteSpace(siteId))
+{
+    <script async defer src="@Html.Raw(System.Text.Encodings.Web.HtmlEncoder.Default.Encode(scriptUrl))" data-asyntai-id="@Html.Raw(System.Text.Encodings.Web.HtmlEncoder.Default.Encode(siteId))"></script>
+}
